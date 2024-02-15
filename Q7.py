@@ -1,9 +1,17 @@
 """
 Q7.Write a Python program to find the repeated items of atuple."""
+list=[]
 
-tuple = (1, 2, 3, 2, 4, 5, 6, 4, 7, 8,9,10,9,12,11,12)
+limit = int(input("Enter number of elements to be insert into to tuple: "))
+for i in range(limit):
+    list.append(int(input(f"Enter {(i+1)}th elements : ")))
+tuple1 = tuple(list)
 repeated = []
-for item in tuple:
-    if tuple.count(item) > 1 and item not in repeated:
+for item in tuple1:
+    if tuple1.count(item) > 1 and item not in repeated:
         repeated.append(item)
-print(repeated)
+
+if len(repeated)==0:
+    print("No repeated items in the tuple. ")
+else:
+    print(repeated)
